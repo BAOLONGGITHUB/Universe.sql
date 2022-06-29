@@ -1,6 +1,7 @@
 import numpy as np
-
+# Tạo function calculate
 def calculate(list):
+  # Tạo array
   while True:
     try:
       array = np.array(list)
@@ -39,7 +40,7 @@ def calculate(list):
         max_ax_2.append(matrix[i].max())
         min_ax_2.append(matrix[i].min())
         sum_ax_2.append(matrix[i].sum())
-
+#Tạo dict
       calculations = {
         'mean': [mean_ax_1, mean_ax_2, mean_flat],
         'variance': [var_ax_1, var_ax_2, var_flat],
@@ -51,7 +52,7 @@ def calculate(list):
       
       return calculations
       break
-
+# Nếu độ dài list không = 9 -> không thực hiện lệnh trên
     except ValueError:
       if len(list) != 9:
         raise ValueError('List must contain nine numbers ')
